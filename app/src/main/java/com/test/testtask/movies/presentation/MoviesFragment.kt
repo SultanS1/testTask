@@ -6,9 +6,11 @@ import androidx.appcompat.widget.SearchView
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.test.testtask.R
+import com.test.testtask.common.Constants
 import com.test.testtask.databinding.FragmentMoviesBinding
 import kotlinx.coroutines.flow.collectLatest
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -32,6 +34,12 @@ class MoviesFragment : Fragment(R.layout.fragment_movies) {
     private fun setupAdapters(){
         binding.moviesRv.layoutManager = LinearLayoutManager(requireContext())
         binding.moviesRv.adapter = moviesAdapter
+        moviesAdapter.clickToDetails = {
+            val bundle = Bundle()
+            bundle.putString(Constants.FILM_NAME, it.filmName)
+            bundle.putInt(Constants.EPISODE_ID, it.episodeId)
+            findNavController().navigate(R.id.action_moviesFragment_to_charactersFragment, bundle)
+        }
     }
 
     private fun triggerActions(){

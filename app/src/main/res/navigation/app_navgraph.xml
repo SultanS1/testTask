@@ -9,5 +9,23 @@
         android:id="@+id/moviesFragment"
         android:name="com.test.testtask.movies.presentation.MoviesFragment"
         android:label="fragment_movies"
-        tools:layout="@layout/fragment_movies" />
+        tools:layout="@layout/fragment_movies" >
+        <action
+            android:id="@+id/action_moviesFragment_to_charactersFragment"
+            app:destination="@id/charactersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/charactersFragment"
+        android:name="com.test.testtask.characters.presentation.CharactersFragment"
+        android:label="fragment_characters"
+        tools:layout="@layout/fragment_characters" >
+        <action
+            android:id="@+id/action_charactersFragment_to_charactersWorldFragment"
+            app:destination="@id/charactersWorldFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/charactersWorldFragment"
+        android:name="com.test.testtask.planet.presentation.CharactersWorldFragment"
+        android:label="fragment_characters_world"
+        tools:layout="@layout/fragment_characters_world" />
 </navigation>

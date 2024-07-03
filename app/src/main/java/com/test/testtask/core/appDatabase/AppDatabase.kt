@@ -5,15 +5,20 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
+import com.test.testtask.characters.data.dto.Character
+import com.test.testtask.characters.data.entity.CharacterEntity
+import com.test.testtask.characters.data.local.CharactersDao
 import com.test.testtask.common.ListOfStringConverter
 import com.test.testtask.movies.data.entity.MovieEntity
 import com.test.testtask.movies.data.local.MoviesDao
 
-@Database(entities = [MovieEntity::class], version = 1)
+@Database(entities = [MovieEntity::class, CharacterEntity::class], version = 1)
 @TypeConverters(ListOfStringConverter::class)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun movieDao(): MoviesDao
+
+    abstract fun charactersDao(): CharactersDao
 
     companion object{
 

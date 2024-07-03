@@ -18,7 +18,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 val moviesModule = module {
     single<CoroutineDispatcher> { Dispatchers.IO }
     single { getRetrofit() }
-    single<MoviesRepository> { MoviesRepositoryImpl(AppDatabase.getDatabase(androidContext()).movieDao(), getAuthApi(get()), get())}
+    single<MoviesRepository> { MoviesRepositoryImpl(AppDatabase.getDatabase(androidContext()).movieDao(), getMoviesApi(get()), get())}
     viewModel { MoviesViewModel(get()) }
 }
 
@@ -29,6 +29,6 @@ fun getRetrofit(): Retrofit{
         .build()
 }
 
-fun getAuthApi(retrofit: Retrofit): MoviesApi {
+fun getMoviesApi(retrofit: Retrofit): MoviesApi {
     return retrofit.create(MoviesApi::class.java)
 }
