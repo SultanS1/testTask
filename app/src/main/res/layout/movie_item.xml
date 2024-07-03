@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/dp_1x"
+    android:background="@color/white"
+    android:paddingVertical="@dimen/dp_1x">
+
+    <TextView
+        android:id="@+id/nameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_2x"
+        android:text="@string/name"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/movieNameTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_2x"
+        android:text="Moview Name"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nameTxt"
+        app:layout_constraintTop_toTopOf="@+id/nameTxt" />
+
+    <TextView
+        android:id="@+id/directorTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_1x"
+        android:text="@string/director"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/nameTxt"
+        app:layout_constraintTop_toBottomOf="@+id/nameTxt" />
+
+    <TextView
+        android:id="@+id/directorNameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Director name"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginHorizontal="@dimen/dp_2x"
+        app:layout_constraintStart_toEndOf="@+id/directorTxt"
+        app:layout_constraintTop_toTopOf="@+id/directorTxt" />
+
+    <TextView
+        android:id="@+id/producerTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_1x"
+        android:text="@string/producer"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/directorTxt"
+        app:layout_constraintTop_toBottomOf="@+id/directorTxt" />
+
+    <TextView
+        android:id="@+id/producerNameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Producer name"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginHorizontal="@dimen/dp_2x"
+        app:layout_constraintStart_toEndOf="@+id/producerTxt"
+        app:layout_constraintTop_toTopOf="@+id/producerTxt" />
+
+    <TextView
+        android:id="@+id/dateTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_1x"
+        android:text="@string/date"
+        android:textSize="16sp"
+        android:textColor="@color/red"
+        app:layout_constraintStart_toStartOf="@+id/producerTxt"
+        app:layout_constraintTop_toBottomOf="@+id/producerTxt" />
+
+    <TextView
+        android:id="@+id/dateInfoTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="date info"
+        android:textSize="16sp"
+        android:textColor="@color/red"
+        android:layout_marginHorizontal="@dimen/dp_2x"
+        app:layout_constraintStart_toEndOf="@+id/dateTxt"
+        app:layout_constraintTop_toTopOf="@+id/dateTxt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
