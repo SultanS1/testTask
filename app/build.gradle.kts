@@ -1,8 +1,8 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-
-
+    alias(libs.plugins.kotlin.parcelize)
+    alias(libs.plugins.kotlin.kapt)
 }
 
 android {
@@ -34,6 +34,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    buildFeatures{
+        viewBinding = true
     }
 }
 
@@ -68,4 +71,8 @@ dependencies {
 
     //viewModel lifecycle
     implementation(libs.viewModelLifeCycle)
+
+    //room
+    implementation (libs.androidx.room.ktx)
+    kapt(libs.androidx.room.compiler)
 }
