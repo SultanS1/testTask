@@ -11,8 +11,10 @@ import com.test.testtask.characters.data.local.CharactersDao
 import com.test.testtask.common.ListOfStringConverter
 import com.test.testtask.movies.data.entity.MovieEntity
 import com.test.testtask.movies.data.local.MoviesDao
+import com.test.testtask.planet.data.entity.PlanetEntity
+import com.test.testtask.planet.data.local.PlanetDao
 
-@Database(entities = [MovieEntity::class, CharacterEntity::class], version = 1)
+@Database(entities = [MovieEntity::class, CharacterEntity::class, PlanetEntity::class], version = 1)
 @TypeConverters(ListOfStringConverter::class)
 abstract class AppDatabase : RoomDatabase() {
 
@@ -20,6 +22,7 @@ abstract class AppDatabase : RoomDatabase() {
 
     abstract fun charactersDao(): CharactersDao
 
+    abstract fun planetDao(): PlanetDao
     companion object{
 
         @Volatile

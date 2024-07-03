@@ -78,7 +78,7 @@
         app:layout_constraintTop_toTopOf="@+id/producerTxt" />
 
     <TextView
-        android:id="@+id/dateTxt"
+        android:id="@+id/type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_1x"
@@ -96,7 +96,7 @@
         android:textSize="16sp"
         android:textColor="@color/red"
         android:layout_marginHorizontal="@dimen/dp_2x"
-        app:layout_constraintStart_toEndOf="@+id/dateTxt"
-        app:layout_constraintTop_toTopOf="@+id/dateTxt" />
+        app:layout_constraintStart_toEndOf="@+id/type"
+        app:layout_constraintTop_toTopOf="@+id/type" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
