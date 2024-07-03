@@ -38,7 +38,7 @@ class CharactersFragment : Fragment(R.layout.fragment_characters) {
         binding.charactersRv.adapter = characterAdapter
         characterAdapter.clickToWorld = {
             val bundle = Bundle()
-            bundle.putInt(Constants.PLANET_ID, it.id.substring(it.id.length-1, it.id.length-2).toInt())
+            bundle.putInt(Constants.PLANET_ID, it.id.substring(it.id.length-2, it.id.length-1).toInt())
             findNavController().navigate(R.id.action_charactersFragment_to_charactersWorldFragment, bundle)
         }
     }
